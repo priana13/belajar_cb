@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCampaignsTable extends Migration
+class CreateLeadsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateCampaignsTable extends Migration
      */
     public function up()
     {
-        Schema::create('campaigns', function (Blueprint $table) {
+        Schema::create('leads', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('judul',100);
-            $table->string('slug',100);
-            $table->text('desc');
-            $table->string('image',200);
+            $table->string('nama',100);
+            $table->string('hp',20);
+            $table->string('email',50);
+            $table->string('kota',100);
+            $table->string('status',20);
             $table->timestamps();
         });
     }
@@ -30,9 +31,6 @@ class CreateCampaignsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('campaigns');
+        Schema::dropIfExists('leads');
     }
-
-
-    
 }

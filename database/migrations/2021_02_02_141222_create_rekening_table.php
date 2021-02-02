@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCampaignsTable extends Migration
+class CreateRekeningTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateCampaignsTable extends Migration
      */
     public function up()
     {
-        Schema::create('campaigns', function (Blueprint $table) {
+        Schema::create('rekening', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('judul',100);
-            $table->string('slug',100);
-            $table->text('desc');
-            $table->string('image',200);
+            $table->string('nama_rekening',100);
+            $table->string('nomor_rekening',30);
+            $table->string('scrap_id',20);
             $table->timestamps();
         });
     }
@@ -30,9 +29,6 @@ class CreateCampaignsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('campaigns');
+        Schema::dropIfExists('rekening');
     }
-
-
-    
 }
