@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class RekeningController extends Controller
 {
@@ -13,7 +14,12 @@ class RekeningController extends Controller
      */
     public function index()
     {
-        return 'halaman rekening';
+
+       $data['nama_halaman'] = "Rekening";
+       $rekening = DB::table('rekening')->get();
+       $data['rekening'] = $rekening;
+       return view('rekening.table_rekening',$data);
+
     }
 
     /**

@@ -17,7 +17,8 @@ class CreateRekeningTable extends Migration
             $table->bigIncrements('id');
             $table->string('nama_rekening',100);
             $table->string('nomor_rekening',30);
-            $table->string('scrap_id',20);
+            $table->string('bank',30);
+            $table->string('scrap_id',20)->nullable();
             $table->timestamps();
         });
     }
