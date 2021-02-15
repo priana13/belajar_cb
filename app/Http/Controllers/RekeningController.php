@@ -29,7 +29,10 @@ class RekeningController extends Controller
      */
     public function create()
     {
-        //
+         $data['nama_halaman'] = "Form Tanbah Rekening";
+       $rekening = DB::table('rekening')->get();
+       $data['rekening'] = $rekening;
+        return view('rekening.form_rekening',$data);
     }
 
     /**
