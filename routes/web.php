@@ -19,4 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/rekening', 'RekeningController@index');
-Route::get('/{rekening}/add', 'RekeningController@create');
+Route::get('/rekening/create', 'RekeningController@create');

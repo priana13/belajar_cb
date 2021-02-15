@@ -7,7 +7,7 @@
               <!-- /.card-header -->
               <div class="card-body">
 
-              	<button class="btn btn-success btn-sm mb-2">Tambah</button>
+              	<a href="rekening/create" class="btn btn-success btn-sm mb-2">Tambah</a>
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>

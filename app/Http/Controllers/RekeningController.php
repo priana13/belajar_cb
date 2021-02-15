@@ -32,7 +32,7 @@ class RekeningController extends Controller
          $data['nama_halaman'] = "Form Tanbah Rekening";
        $rekening = DB::table('rekening')->get();
        $data['rekening'] = $rekening;
-        return view('rekening.form_rekening',$data);
+        return view('rekening.form',$data);
     }
 
     /**
