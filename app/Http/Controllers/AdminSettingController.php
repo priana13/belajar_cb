@@ -5,12 +5,12 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminRekeningController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminSettingController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
-			$this->title_field = "nama_rekening";
+			$this->title_field = "id";
 			$this->limit = "20";
 			$this->orderby = "id,desc";
 			$this->global_privilege = false;
@@ -25,31 +25,25 @@
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
-			$this->table = "rekening";
+			$this->table = "setting";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Nama Rekening","name"=>"nama_rekening"];
-			$this->col[] = ["label"=>"Nomor Rekening","name"=>"nomor_rekening"];
-			$this->col[] = ["label"=>"Bank","name"=>"bank"];
-			$this->col[] = ["label"=>"Scrap Id","name"=>"scrap_id"];
+			$this->col[] = ["label"=>"Api Moota","name"=>"api_moota"];
+			$this->col[] = ["label"=>"Api Woo Wa","name"=>"api_woo_wa"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Nama Rekening','name'=>'nama_rekening','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Nomor Rekening','name'=>'nomor_rekening','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Bank','name'=>'bank','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Scrap Id','name'=>'scrap_id','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Api Moota','name'=>'api_moota','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Api Woo Wa','name'=>'api_woo_wa','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Nama Rekening','name'=>'nama_rekening','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Nomor Rekening','name'=>'nomor_rekening','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Bank','name'=>'bank','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Scrap Id','name'=>'scrap_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'scrap,id'];
+			//$this->form[] = ["label"=>"Api Moota","name"=>"api_moota","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Api Woo Wa","name"=>"api_woo_wa","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
 			# OLD END FORM
 
 			/* 

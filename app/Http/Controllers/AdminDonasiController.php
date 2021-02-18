@@ -5,12 +5,12 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminRekeningController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminDonasiController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
-			$this->title_field = "nama_rekening";
+			$this->title_field = "id";
 			$this->limit = "20";
 			$this->orderby = "id,desc";
 			$this->global_privilege = false;
@@ -25,31 +25,34 @@
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
-			$this->table = "rekening";
+			$this->table = "donasi";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Nama Rekening","name"=>"nama_rekening"];
-			$this->col[] = ["label"=>"Nomor Rekening","name"=>"nomor_rekening"];
-			$this->col[] = ["label"=>"Bank","name"=>"bank"];
-			$this->col[] = ["label"=>"Scrap Id","name"=>"scrap_id"];
+			$this->col[] = ["label"=>"Nominal","name"=>"nominal"];
+			$this->col[] = ["label"=>"Status","name"=>"status"];
+			$this->col[] = ["label"=>"Campaigns Id","name"=>"campaigns_id","join"=>"campaigns,judul"];
+			$this->col[] = ["label"=>"Leads Id","name"=>"leads_id","join"=>"leads,nama"];
+			$this->col[] = ["label"=>"Mutasi Bank Id","name"=>"mutasi_bank_id","join"=>"mutasi_bank,id"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Nama Rekening','name'=>'nama_rekening','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Nomor Rekening','name'=>'nomor_rekening','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Bank','name'=>'bank','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Scrap Id','name'=>'scrap_id','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Nominal','name'=>'nominal','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Status','name'=>'status','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Campaigns Id','name'=>'campaigns_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'campaigns,judul'];
+			$this->form[] = ['label'=>'Leads Id','name'=>'leads_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'leads,nama'];
+			$this->form[] = ['label'=>'Mutasi Bank Id','name'=>'mutasi_bank_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'mutasi_bank,id'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Nama Rekening','name'=>'nama_rekening','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Nomor Rekening','name'=>'nomor_rekening','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Bank','name'=>'bank','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Scrap Id','name'=>'scrap_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'scrap,id'];
+			//$this->form[] = ["label"=>"Nominal","name"=>"nominal","type"=>"number","required"=>TRUE,"validation"=>"required|integer|min:0"];
+			//$this->form[] = ["label"=>"Status","name"=>"status","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Campaigns Id","name"=>"campaigns_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"campaigns,judul"];
+			//$this->form[] = ["label"=>"Leads Id","name"=>"leads_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"leads,nama"];
+			//$this->form[] = ["label"=>"Mutasi Bank Id","name"=>"mutasi_bank_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"mutasi_bank,id"];
 			# OLD END FORM
 
 			/* 
