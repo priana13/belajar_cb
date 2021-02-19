@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 19, 2021 at 12:04 AM
+-- Generation Time: Feb 20, 2021 at 12:32 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -179,7 +179,32 @@ INSERT INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `d
 (6, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/jenis_campaigns/add-save', 'Add New Data  at Jenis Campaigns', '', 1, '2021-02-18 16:00:57', NULL),
 (7, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/jenis_campaigns/add-save', 'Add New Data  at Jenis Campaigns', '', 1, '2021-02-18 16:01:04', NULL),
 (8, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/jenis_campaigns/add-save', 'Add New Data  at Jenis Campaigns', '', 1, '2021-02-18 16:01:06', NULL),
-(9, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/campaigns/add-save', 'Add New Data Sedekah Santri at Campaigns', '', 1, '2021-02-18 16:03:24', NULL);
+(9, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/campaigns/add-save', 'Add New Data Sedekah Santri at Campaigns', '', 1, '2021-02-18 16:03:24', NULL),
+(10, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/login', 'admin@crudbooster.com login with IP Address 127.0.0.1', '', 1, '2021-02-19 15:57:06', NULL),
+(11, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/leads/add-save', 'Add New Data Priana at Leads', '', 1, '2021-02-19 15:58:42', NULL),
+(12, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/mutasi_bank/add-save', 'Add New Data  at Mutasi Bank', '', 1, '2021-02-19 15:59:26', NULL),
+(13, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/menu_management/add-save', 'Add New Data Formulir Campaign at Menu Management', '', 1, '2021-02-19 16:01:17', NULL),
+(14, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/menu_management/edit-save/3', 'Update data Campaigns at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr></tbody></table>', 1, '2021-02-19 16:03:39', NULL),
+(15, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/menu_management/edit-save/9', 'Update data Formulir Campaign at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>parent_id</td><td>3</td><td></td></tr></tbody></table>', 1, '2021-02-19 16:03:46', NULL),
+(16, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/menu_management/edit-save/2', 'Update data Jenis Campaigns at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>parent_id</td><td>3</td><td></td></tr><tr><td>sorting</td><td>2</td><td></td></tr></tbody></table>', 1, '2021-02-19 16:03:53', NULL),
+(17, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/menu_management/edit-save/6', 'Update data Donasi at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>2</td><td></td></tr></tbody></table>', 1, '2021-02-19 16:04:00', NULL),
+(18, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/menu_management/edit-save/4', 'Update data Leads at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>3</td><td></td></tr></tbody></table>', 1, '2021-02-19 16:04:07', NULL),
+(19, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/menu_management/edit-save/5', 'Update data Mutasi Bank at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>4</td><td></td></tr></tbody></table>', 1, '2021-02-19 16:04:14', NULL),
+(20, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/menu_management/edit-save/8', 'Update data Setting at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>sorting</td><td>5</td><td></td></tr></tbody></table>', 1, '2021-02-19 16:04:22', NULL),
+(21, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/menu_management/edit-save/7', 'Update data Konfigurasi Global at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>parent_id</td><td>8</td><td></td></tr></tbody></table>', 1, '2021-02-19 16:04:29', NULL),
+(22, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/menu_management/edit-save/1', 'Update data rekening at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>parent_id</td><td>8</td><td></td></tr><tr><td>sorting</td><td>2</td><td></td></tr></tbody></table>', 1, '2021-02-19 16:04:36', NULL),
+(23, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/users/edit-save/1', 'Update data Super Admin at Users Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>photo</td><td></td><td>uploads/1/2021-02/screenshot_from_2021_02_18_06_02_05.png</td></tr><tr><td>email</td><td>admin@crudbooster.com</td><td>super@autocare.id</td></tr><tr><td>password</td><td>$2y$10$4bc/exUE8CQw7A8HjFDJ8.ImgPDGwu/oEWGIfnKRL.R6XejUJBgoy</td><td>$2y$10$YsR8dccLr4J7IvohG22lguLhzi2tJ8awHB1Ue4D5uT2ceiXGzt//i</td></tr><tr><td>status</td><td>Active</td><td></td></tr></tbody></table>', 1, '2021-02-19 16:07:03', NULL),
+(24, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/logout', 'super@autocare.id logout', '', 1, '2021-02-19 16:07:29', NULL),
+(25, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/login', 'super@autocare.id login with IP Address 127.0.0.1', '', 1, '2021-02-19 16:15:12', NULL),
+(26, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/users/edit-save/1', 'Update data Super Admin at Users Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>password</td><td>$2y$10$4bc/exUE8CQw7A8HjFDJ8.ImgPDGwu/oEWGIfnKRL.R6XejUJBgoy</td><td>$2y$10$CFqbPR6TVu1DF0Ish9ExwuKH1/rOLphXTUSO/gmWvkO.96QV0tami</td></tr><tr><td>status</td><td>Active</td><td></td></tr></tbody></table>', 1, '2021-02-19 16:15:47', NULL),
+(27, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/logout', 'super@autocare.id logout', '', 1, '2021-02-19 16:15:54', NULL),
+(28, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/login', 'super@autocare.id login with IP Address 127.0.0.1', '', 1, '2021-02-19 16:15:58', NULL),
+(29, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/users/edit-save/2', 'Update data Admin at Users Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td>priana</td><td>Admin</td></tr><tr><td>photo</td><td></td><td>uploads/1/2021-02/screenshot_from_2021_02_18_06_02_39.png</td></tr><tr><td>email</td><td>priana.yhc@gmail.com</td><td>admin@autocare.id</td></tr><tr><td>password</td><td>bismillah</td><td>$2y$10$Y2ePQtucCG/y2WxdCA4RNeQWhMK6jZzC6FHZmIBNeH900dgCb/jhe</td></tr><tr><td>id_cms_privileges</td><td>1</td><td>2</td></tr><tr><td>status</td><td></td><td></td></tr></tbody></table>', 1, '2021-02-19 16:17:05', NULL),
+(30, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/logout', 'super@autocare.id logout', '', 1, '2021-02-19 16:17:12', NULL),
+(31, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/login', 'admin@autocare.id login with IP Address 127.0.0.1', '', 2, '2021-02-19 16:17:16', NULL),
+(32, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/logout', 'admin@autocare.id keluar', '', 2, '2021-02-19 16:31:13', NULL),
+(33, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/login', 'super@autocare.id login dengan IP Address 127.0.0.1', '', 1, '2021-02-19 16:31:18', NULL),
+(34, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/menu_management/edit-save/1', 'Memperbaharui data Rekening pada Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td>rekening</td><td>Rekening</td></tr><tr><td>parent_id</td><td>8</td><td></td></tr><tr><td>sorting</td><td>2</td><td></td></tr></tbody></table>', 1, '2021-02-19 16:31:36', NULL);
 
 -- --------------------------------------------------------
 
@@ -208,14 +233,15 @@ CREATE TABLE `cms_menus` (
 --
 
 INSERT INTO `cms_menus` (`id`, `name`, `type`, `path`, `color`, `icon`, `parent_id`, `is_active`, `is_dashboard`, `id_cms_privileges`, `sorting`, `created_at`, `updated_at`) VALUES
-(1, 'rekening', 'Route', 'AdminRekeningControllerGetIndex', NULL, 'fa fa-bank', 8, 1, 0, 1, 3, '2021-02-18 08:38:18', NULL),
-(2, 'Jenis Campaigns', 'Route', 'AdminJenisCampaignsControllerGetIndex', NULL, 'fa fa-meanpath', 8, 1, 0, 1, 2, '2021-02-18 15:53:21', NULL),
-(3, 'Campaigns', 'Route', 'AdminCampaignsControllerGetIndex', NULL, 'fa fa-th-list', 0, 1, 0, 1, 1, '2021-02-18 15:54:03', NULL),
-(4, 'Leads', 'Route', 'AdminLeadsControllerGetIndex', NULL, 'fa fa-users', 0, 1, 0, 1, 3, '2021-02-18 15:54:40', NULL),
-(5, 'Mutasi Bank', 'Route', 'AdminMutasiBankControllerGetIndex', NULL, 'fa fa-bank', 0, 1, 0, 1, 4, '2021-02-18 15:55:18', NULL),
-(6, 'Donasi', 'Route', 'AdminDonasiControllerGetIndex', NULL, 'fa fa-heart', 0, 1, 0, 1, 2, '2021-02-18 15:55:51', NULL),
-(7, 'Konfigurasi Global', 'Route', 'AdminSettingControllerGetIndex', 'normal', 'fa fa-gear', 8, 1, 0, 1, 1, '2021-02-18 15:57:11', '2021-02-18 15:58:53'),
-(8, 'Setting', 'Module', 'setting', 'normal', 'fa fa-gear', 0, 1, 0, 1, 5, '2021-02-18 15:58:17', NULL);
+(1, 'Rekening', 'Route', 'AdminRekeningControllerGetIndex', 'normal', 'fa fa-bank', 8, 1, 0, 1, 2, '2021-02-18 08:38:18', '2021-02-19 16:31:36'),
+(2, 'Jenis Campaigns', 'Route', 'AdminJenisCampaignsControllerGetIndex', 'normal', 'fa fa-meanpath', 3, 1, 0, 1, 2, '2021-02-18 15:53:21', '2021-02-19 16:03:52'),
+(3, 'Campaigns', 'Route', 'AdminCampaignsControllerGetIndex', 'normal', 'fa fa-th-list', 0, 1, 0, 1, 1, '2021-02-18 15:54:03', '2021-02-19 16:03:39'),
+(4, 'Leads', 'Route', 'AdminLeadsControllerGetIndex', 'normal', 'fa fa-users', 0, 1, 0, 1, 3, '2021-02-18 15:54:40', '2021-02-19 16:04:07'),
+(5, 'Mutasi Bank', 'Route', 'AdminMutasiBankControllerGetIndex', 'normal', 'fa fa-bank', 0, 1, 0, 1, 4, '2021-02-18 15:55:18', '2021-02-19 16:04:14'),
+(6, 'Donasi', 'Route', 'AdminDonasiControllerGetIndex', 'normal', 'fa fa-heart', 0, 1, 0, 1, 2, '2021-02-18 15:55:51', '2021-02-19 16:04:00'),
+(7, 'Konfigurasi Global', 'Route', 'AdminSettingControllerGetIndex', 'normal', 'fa fa-gear', 8, 1, 0, 1, 1, '2021-02-18 15:57:11', '2021-02-19 16:04:29'),
+(8, 'Setting', 'Module', 'setting', 'normal', 'fa fa-gear', 0, 1, 0, 1, 5, '2021-02-18 15:58:17', '2021-02-19 16:04:22'),
+(9, 'Formulir Campaign', 'Module', 'campaigns', 'normal', 'fa fa-list', 3, 1, 0, 1, 1, '2021-02-19 16:01:17', '2021-02-19 16:03:46');
 
 -- --------------------------------------------------------
 
@@ -234,14 +260,24 @@ CREATE TABLE `cms_menus_privileges` (
 --
 
 INSERT INTO `cms_menus_privileges` (`id`, `id_cms_menus`, `id_cms_privileges`) VALUES
-(1, 1, 1),
-(2, 2, 1),
-(3, 3, 1),
-(4, 4, 1),
-(5, 5, 1),
-(6, 6, 1),
-(8, 8, 1),
-(9, 7, 1);
+(11, 3, 2),
+(12, 3, 1),
+(13, 9, 2),
+(14, 9, 1),
+(15, 2, 2),
+(16, 2, 1),
+(17, 6, 2),
+(18, 6, 1),
+(19, 4, 2),
+(20, 4, 1),
+(21, 5, 2),
+(22, 5, 1),
+(23, 8, 2),
+(24, 8, 1),
+(25, 7, 2),
+(26, 7, 1),
+(29, 1, 2),
+(30, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -323,7 +359,8 @@ CREATE TABLE `cms_privileges` (
 --
 
 INSERT INTO `cms_privileges` (`id`, `name`, `is_superadmin`, `theme_color`, `created_at`, `updated_at`) VALUES
-(1, 'Super Administrator', 1, 'skin-red', '2021-02-18 08:30:15', NULL);
+(1, 'Super Administrator', 1, 'skin-red', '2021-02-18 08:30:15', NULL),
+(2, 'Admin', 0, 'skin-blue', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -366,7 +403,15 @@ INSERT INTO `cms_privileges_roles` (`id`, `is_visible`, `is_create`, `is_read`, 
 (15, 1, 1, 1, 1, 1, 1, 15, NULL, NULL),
 (16, 1, 1, 1, 1, 1, 1, 16, NULL, NULL),
 (17, 1, 1, 1, 1, 1, 1, 17, NULL, NULL),
-(18, 1, 1, 1, 1, 1, 1, 18, NULL, NULL);
+(18, 1, 1, 1, 1, 1, 1, 18, NULL, NULL),
+(19, 1, 1, 1, 1, 1, 2, 14, NULL, NULL),
+(20, 1, 1, 1, 1, 1, 2, 17, NULL, NULL),
+(21, 1, 1, 1, 1, 1, 2, 13, NULL, NULL),
+(22, 1, 1, 1, 1, 1, 2, 15, NULL, NULL),
+(23, 1, 1, 1, 1, 1, 2, 16, NULL, NULL),
+(24, 1, 1, 1, 1, 1, 2, 12, NULL, NULL),
+(25, 1, 1, 1, 1, 1, 2, 18, NULL, NULL),
+(26, 1, 1, 1, 1, 1, 2, 4, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -465,7 +510,8 @@ CREATE TABLE `cms_users` (
 --
 
 INSERT INTO `cms_users` (`id`, `name`, `photo`, `email`, `password`, `id_cms_privileges`, `created_at`, `updated_at`, `status`) VALUES
-(1, 'Super Admin', NULL, 'admin@crudbooster.com', '$2y$10$4bc/exUE8CQw7A8HjFDJ8.ImgPDGwu/oEWGIfnKRL.R6XejUJBgoy', 1, '2021-02-18 08:30:14', NULL, 'Active');
+(1, 'Super Admin', 'uploads/1/2021-02/screenshot_from_2021_02_18_06_02_05.png', 'super@autocare.id', '$2y$10$CFqbPR6TVu1DF0Ish9ExwuKH1/rOLphXTUSO/gmWvkO.96QV0tami', 1, '2021-02-18 08:30:14', '2021-02-19 16:15:47', 'Active'),
+(2, 'Admin', 'uploads/1/2021-02/screenshot_from_2021_02_18_06_02_39.png', 'admin@autocare.id', '$2y$10$Y2ePQtucCG/y2WxdCA4RNeQWhMK6jZzC6FHZmIBNeH900dgCb/jhe', 2, NULL, '2021-02-19 16:17:05', NULL);
 
 -- --------------------------------------------------------
 
@@ -538,6 +584,13 @@ CREATE TABLE `leads` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `leads`
+--
+
+INSERT INTO `leads` (`id`, `nama`, `hp`, `email`, `kota`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Priana', '089504932111', 'herian.sap@gmail.com', 'Bogor', 'Aktif', '2021-02-19 15:58:42', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -609,6 +662,13 @@ CREATE TABLE `mutasi_bank` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `rekening_id` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `mutasi_bank`
+--
+
+INSERT INTO `mutasi_bank` (`id`, `tanggal`, `keterangan`, `nominal`, `type`, `status`, `created_at`, `updated_at`, `rekening_id`) VALUES
+(1, '2021-02-20', 'Tes Mutasi Donasi', 10000, 'CR', 'Unconfirm', '2021-02-19 15:59:26', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -899,19 +959,19 @@ ALTER TABLE `cms_email_templates`
 -- AUTO_INCREMENT for table `cms_logs`
 --
 ALTER TABLE `cms_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `cms_menus`
 --
 ALTER TABLE `cms_menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `cms_menus_privileges`
 --
 ALTER TABLE `cms_menus_privileges`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `cms_moduls`
@@ -929,13 +989,13 @@ ALTER TABLE `cms_notifications`
 -- AUTO_INCREMENT for table `cms_privileges`
 --
 ALTER TABLE `cms_privileges`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `cms_privileges_roles`
 --
 ALTER TABLE `cms_privileges_roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `cms_settings`
@@ -959,7 +1019,7 @@ ALTER TABLE `cms_statistic_components`
 -- AUTO_INCREMENT for table `cms_users`
 --
 ALTER TABLE `cms_users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `donasi`
@@ -983,7 +1043,7 @@ ALTER TABLE `jenis_campaigns`
 -- AUTO_INCREMENT for table `leads`
 --
 ALTER TABLE `leads`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -995,7 +1055,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `mutasi_bank`
 --
 ALTER TABLE `mutasi_bank`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `rekening`

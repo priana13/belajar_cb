@@ -43,7 +43,7 @@
 			$this->form[] = ['label'=>'Slug','name'=>'slug','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Desc','name'=>'desc','type'=>'textarea','validation'=>'required|string|min:5|max:5000','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Image','name'=>'image','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'File types support : JPG, JPEG, PNG, GIF, BMP'];
-			$this->form[] = ['label'=>'Jenis Campaigns Id','name'=>'jenis_campaigns_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'jenis_campaigns,jenis_campaign'];
+			$this->form[] = ['label'=>'Jenis Campaigns','name'=>'jenis_campaigns_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'jenis_campaigns,jenis_campaign'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM

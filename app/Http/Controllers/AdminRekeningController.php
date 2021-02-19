@@ -40,8 +40,8 @@
 			$this->form = [];
 			$this->form[] = ['label'=>'Nama Rekening','name'=>'nama_rekening','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Nomor Rekening','name'=>'nomor_rekening','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Bank','name'=>'bank','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Scrap Id','name'=>'scrap_id','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Bank','name'=>'bank','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Mandiri;BCA;BNIS;BSM;BRI;Muamalat'];
+			$this->form[] = ['label'=>'Scrap Id','name'=>'scrap_id','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
