@@ -15,7 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Route::get('/donasi',function(){
+    return view('front.form_donasi');
+});
+
+// Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/rekening', 'RekeningController@index');
