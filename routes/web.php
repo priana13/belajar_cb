@@ -19,6 +19,10 @@ Route::get('/donasi',function(){
     return view('front.form_donasi');
 });
 
+Route::get('/terimakasih',function(){
+    return view('front.terimakasih');
+});
+
 // Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
