@@ -20,7 +20,7 @@
 			$this->button_add = true;
 			$this->button_edit = true;
 			$this->button_delete = true;
-			$this->button_detail = true;
+			$this->button_detail = false;
 			$this->button_show = true;
 			$this->button_filter = true;
 			$this->button_import = false;
@@ -34,7 +34,7 @@
 			$this->col[] = ["label"=>"Slug","name"=>"slug"];
 			$this->col[] = ["label"=>"Desc","name"=>"desc"];
 			$this->col[] = ["label"=>"Image","name"=>"image","image"=>true];
-			$this->col[] = ["label"=>"Jenis Campaigns Id","name"=>"jenis_campaigns_id","join"=>"jenis_campaigns,id"];
+			$this->col[] = ["label"=>"Jenis Campaigns Id","name"=>"jenis_campaigns_id","join"=>"jenis_campaigns,jenis_campaign"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
@@ -82,7 +82,7 @@
 	        | 
 	        */
 	        $this->addaction = array();
-
+			$this->addaction[] = ['label'=>'lihat','url'=>url('[slug]'),'icon'=>'fa fa-check','color'=>'success'];
 
 	        /* 
 	        | ---------------------------------------------------------------------- 

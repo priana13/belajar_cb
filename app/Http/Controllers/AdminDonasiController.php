@@ -24,17 +24,20 @@
 			$this->button_show = true;
 			$this->button_filter = true;
 			$this->button_import = false;
-			$this->button_export = false;
+			$this->button_export = true;
 			$this->table = "donasi";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
+			$this->col[] = ["label"=>"Id","name"=>"id"];
+			$this->col[] = ["label"=>"Tanggal","name"=>"created_at"];
+			$this->col[] = ["label"=>"Campaigns","name"=>"campaigns_id","join"=>"campaigns,judul"];
+			$this->col[] = ["label"=>"Donatur","name"=>"leads_id","join"=>"leads,nama"];
+			$this->col[] = ["label"=>"Rekening","name"=>"rekening_id","join"=>"rekening,bank"];
 			$this->col[] = ["label"=>"Nominal","name"=>"nominal"];
 			$this->col[] = ["label"=>"Status","name"=>"status"];
-			$this->col[] = ["label"=>"Campaigns Id","name"=>"campaigns_id","join"=>"campaigns,judul"];
-			$this->col[] = ["label"=>"Leads Id","name"=>"leads_id","join"=>"leads,nama"];
-			$this->col[] = ["label"=>"Mutasi Bank Id","name"=>"mutasi_bank_id","join"=>"mutasi_bank,id"];
+			$this->col[] = ["label"=>"ID Mutasi","name"=>"mutasi_bank_id","join"=>"mutasi_bank,id"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
@@ -45,15 +48,6 @@
 			$this->form[] = ['label'=>'Nominal','name'=>'nominal','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Status','name'=>'status','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
-
-			# OLD START FORM
-			//$this->form = [];
-			//$this->form[] = ["label"=>"Nominal","name"=>"nominal","type"=>"number","required"=>TRUE,"validation"=>"required|integer|min:0"];
-			//$this->form[] = ["label"=>"Status","name"=>"status","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Campaigns Id","name"=>"campaigns_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"campaigns,judul"];
-			//$this->form[] = ["label"=>"Leads Id","name"=>"leads_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"leads,nama"];
-			//$this->form[] = ["label"=>"Mutasi Bank Id","name"=>"mutasi_bank_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"mutasi_bank,id"];
-			# OLD END FORM
 
 			/* 
 	        | ---------------------------------------------------------------------- 
@@ -82,31 +76,6 @@
 	        | 
 	        */
 	        $this->addaction = array();
-
-
-	        /* 
-	        | ---------------------------------------------------------------------- 
-	        | Add More Button Selected
-	        | ----------------------------------------------------------------------     
-	        | @label       = Label of action 
-	        | @icon 	   = Icon from fontawesome
-	        | @name 	   = Name of button 
-	        | Then about the action, you should code at actionButtonSelected method 
-	        | 
-	        */
-	        $this->button_selected = array();
-
-	                
-	        /* 
-	        | ---------------------------------------------------------------------- 
-	        | Add alert message to this module at overheader
-	        | ----------------------------------------------------------------------     
-	        | @message = Text of message 
-	        | @type    = warning,success,danger,info        
-	        | 
-	        */
-	        $this->alert        = array();
-	                
 
 	        
 	        /* 
@@ -153,31 +122,6 @@
 	        |
 	        */
 	        $this->script_js = NULL;
-
-
-            /*
-	        | ---------------------------------------------------------------------- 
-	        | Include HTML Code before index table 
-	        | ---------------------------------------------------------------------- 
-	        | html code to display it before index table
-	        | $this->pre_index_html = "<p>test</p>";
-	        |
-	        */
-	        $this->pre_index_html = null;
-	        
-	        
-	        
-	        /*
-	        | ---------------------------------------------------------------------- 
-	        | Include HTML Code after index table 
-	        | ---------------------------------------------------------------------- 
-	        | html code to display it after index table
-	        | $this->post_index_html = "<p>test</p>";
-	        |
-	        */
-	        $this->post_index_html = null;
-	        
-	        
 	        
 	        /*
 	        | ---------------------------------------------------------------------- 
@@ -188,30 +132,6 @@
 	        |
 	        */
 	        $this->load_js = array();
-	        
-	        
-	        
-	        /*
-	        | ---------------------------------------------------------------------- 
-	        | Add css style at body 
-	        | ---------------------------------------------------------------------- 
-	        | css code in the variable 
-	        | $this->style_css = ".style{....}";
-	        |
-	        */
-	        $this->style_css = NULL;
-	        
-	        
-	        
-	        /*
-	        | ---------------------------------------------------------------------- 
-	        | Include css File 
-	        | ---------------------------------------------------------------------- 
-	        | URL of your css each array 
-	        | $this->load_css[] = asset("myfile.css");
-	        |
-	        */
-	        $this->load_css = array();
 	        
 	        
 	    }
@@ -325,6 +245,10 @@
 	        //Your code here
 
 	    }
+
+
+
+
 
 
 

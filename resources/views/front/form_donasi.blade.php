@@ -11,8 +11,6 @@
     <title>Formulir Donasi</title>
   </head>
   <body>
-
-
 <div class="container">
 
     <div class="row mb-3"> <!-- row navbar -->
@@ -32,23 +30,27 @@
         </div>
         <div class="col-md">
             <h5>Anda akan berdonasi untuk Program:</h5>
-            <h4 class="mb-3"><strong>#Donasi Untuk Santri Penghafal Quran</strong></h4>
+            <h4 class="mb-3"><strong>#{{$campaign->judul}}</strong></h4>
             
-            <form>
+            <form action="{{route('proses_transaksi')}}" method="POST">
+
+                @csrf
                 <!-- Jumlah Donasi input -->
+                <input type="hidden" name="campaign_id" value="{{$campaign->id}}">
                 <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1">Rp.</span>
                 </div>
-                <input type="text" class="form-control form-control-lg" placeholder="*Nominal Donasi" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" name="nominal" class="form-control form-control-lg" placeholder="*Nominal Donasi">
                 </div>
 
                 <!-- Pilih Metode Donasi -->
                 <div class="form-group">
-                    <select class="form-control" id="exampleFormControlSelect1">
-                    <option>*Pilih Metode Donasi</option>
-                    <option>Bank Syariah Mandiri</option>
-                    <option>Bank BNI Syariah</option>
+                    <select class="form-control" name="rekening" id="rekening">
+                    <option value="">*Pilih Metode Donasi</option>
+                    @foreach($rekening as $row)
+                    <option value="{{$row->id}}">{{$row->bank}}</option>
+                    @endforeach
 
                     </select>
                 </div>
@@ -57,19 +59,19 @@
                 <br><br>                
                 <!-- Nama input -->
                 <div class="form-outline mb-4">
-                <input class="form-control" type="text" placeholder="*Nama">
+                <input name="nama" class="form-control" type="text" placeholder="*Nama">
                 </div>
 
                 <!-- Nama input -->
                 <div class="form-outline mb-4">
-                <input class="form-control" type="text" placeholder="*No HP">
+                <input name="hp" class="form-control" type="text" placeholder="*No HP">
                 </div>
 
 
 
                 <!-- Message input -->
                 <div class="form-outline mb-4">
-                    <textarea class="form-control" id="form4Example3" rows="4" placeholder="Harapan dan Do'a"></textarea>
+                    <textarea name="doa" class="form-control" id="doa" rows="4" placeholder="Harapan dan Do'a"></textarea>
                 </div>
 
                 <!-- Submit button -->

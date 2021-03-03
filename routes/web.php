@@ -15,16 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/donasi',function(){
-    return view('front.form_donasi');
-});
 
-Route::get('/terimakasih',function(){
-    return view('front.terimakasih');
-});
+Route::post('/proses_transaksi', 'TransaksiController@store')->name('proses_transaksi');
+Route::get('/terimakasih','TransaksiController@terimakasih')->name('terimakasih');;
 
-// Auth::routes();
+// // Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/rekening', 'RekeningController@index');
-Route::get('/rekening/create', 'RekeningController@create');
+// Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/rekening', 'RekeningController@index');
+// Route::get('/rekening/create', 'RekeningController@create');
+
+//front
+Route::get('/{slug}', 'TransaksiController@create');
+
