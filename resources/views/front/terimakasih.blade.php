@@ -31,19 +31,19 @@
         <hr class="border border-warning">
         
             <h4 class="h4">Yuk Selangkah Lagi Donasimu Berhasil </h4>
-            <p class="text mb-5">No. Invoice : INV-210227733944</p>
+            <p class="text mb-5">No. Invoice : INV-{{$transaksi->id}}</p>
             
 
             <p class="text mb-0 pb-0">Silahkan transfer ke rekening a/n</p>
-            <h5 class="h5 mt-0 pt-0">Yayasan A - KCP Bandung</h5>
+        <h5 class="h5 mt-0 pt-0">{{$transaksi->nama_rekening}}</h5>
 
             <div class="flex border border-gray rounded bg-gray-600 items-center p-3 mt-3 mb-3">
-              <p>05588888</p>
+              <p>{{$transaksi->nomor_rekening}}</p>
              </div>
 
 
-            <p>Transfer sesuai nominal berikut</p>
-            <h3 class ="text-base">Rp. 10.057</h3>
+            <p>Transfer sesuai nominal berikut ya Kak.</p>
+            <h3 class ="text-base">Rp. {{number_format($transaksi->nominal,0)}}</h3>
 
 
             <div class="alert alert-warning" role="alert">
@@ -56,7 +56,7 @@
                 <table class="table table-price rounded border border-gray bg-gray p-3">
                   <tr>
                     <td>Donasi</td>
-                    <td>50.000</td>
+                    <td>{{number_format($transaksi->nominal,0)}}</td>
                   </tr>
                   <tr>
                     <td>Kode Unik</td>

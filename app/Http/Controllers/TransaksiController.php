@@ -38,7 +38,7 @@ class TransaksiController extends Controller
 
        // dd($lead);
 
-        DB::table('donasi')->insert(
+       $id = DB::table('donasi')->insertGetId(
             [
                 'nominal' => $request->nominal, 
                 'status' => "pending",
@@ -48,14 +48,22 @@ class TransaksiController extends Controller
             ]
         );
 
-    return redirect()->route('terimakasih');
+    //return redirect()->route('terimakasih');
+    return redirect()->route('terimakasih', ['id' => $id]);
+   // return redirect()->action('TransaksiController@terimakasih');
 
     }
 
 
-    public function terimakasih()
+    public function terimakasih($id)
     {
-        return view('front.terimakasih');
+        $data['transaksi'] = DB::table('donasi')
+                            ->select(['donasi.*','rekening.nomor_rekening','rekening.nama_rekening','rekening.bank'])
+                            ->join('rekening','rekening_id','rekening.id')
+                            ->where('donasi.id',$id)->get()->first();
+
+
+        return view('front.terimakasih',$data);
     }
 
 }
