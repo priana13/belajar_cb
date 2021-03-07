@@ -56,11 +56,11 @@
                 <table class="table table-price rounded border border-gray bg-gray p-3">
                   <tr>
                     <td>Donasi</td>
-                    <td>{{number_format($transaksi->nominal,0)}}</td>
+                    <td>{{number_format($transaksi->nominal-$transaksi->kode_unik,0)}}</td>
                   </tr>
                   <tr>
                     <td>Kode Unik</td>
-                    <td>057</td>
+                    <td>{{number_format($transaksi->kode_unik,0)}}</td>
                   </tr>
                 </table>
             </div>

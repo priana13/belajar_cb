@@ -37,30 +37,37 @@ class TransaksiController extends Controller
         }
 
        // dd($lead);
+       $kode_unik = rand(100,999);
+       $nominal = $request->nominal + $kode_unik;
 
        $id = DB::table('donasi')->insertGetId(
             [
-                'nominal' => $request->nominal, 
+                
                 'status' => "pending",
                 'campaigns_id' =>$request->campaign_id,
                 'leads_id' =>$lead,
-                'rekening_id' =>$request->rekening
+                'rekening_id' =>$request->rekening,
+                'nominal' => $nominal, 
+                'kode_unik' =>$kode_unik,
+                'kode_transaksi' => uniqid(),
             ]
         );
 
+        $kode = DB::table('donasi')->select(['kode_transaksi'])->where('id',$id)->get()->first();
+
     //return redirect()->route('terimakasih');
-    return redirect()->route('terimakasih', ['id' => $id]);
+    return redirect()->route('terimakasih', ['kode' => $kode->kode_transaksi]);
    // return redirect()->action('TransaksiController@terimakasih');
 
     }
 
 
-    public function terimakasih($id)
+    public function terimakasih($kode)
     {
         $data['transaksi'] = DB::table('donasi')
                             ->select(['donasi.*','rekening.nomor_rekening','rekening.nama_rekening','rekening.bank'])
                             ->join('rekening','rekening_id','rekening.id')
-                            ->where('donasi.id',$id)->get()->first();
+                            ->where('donasi.kode_transaksi',$kode)->get()->first();
 
 
         return view('front.terimakasih',$data);

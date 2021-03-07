@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 
 Route::post('/proses_transaksi', 'TransaksiController@store')->name('proses_transaksi');
-Route::get('/terimakasih/{id}','TransaksiController@terimakasih')->name('terimakasih');;
+Route::get('/terimakasih/{kode}','TransaksiController@terimakasih')->name('terimakasih');;
 
 // // Auth::routes();
 

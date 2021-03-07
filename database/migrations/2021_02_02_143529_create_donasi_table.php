@@ -17,6 +17,8 @@ class CreateDonasiTable extends Migration
             $table->bigIncrements('id');
             $table->integer('nominal');
             $table->string('status',10);
+            $table->integer('kode_unik');
+            $table->integer('kode_transaksi');
             $table->timestamps();
 
             $table->unsignedBigInteger('campaigns_id');
