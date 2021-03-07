@@ -15,15 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::post('/proses_transaksi', 'TransaksiController@store')->name('proses_transaksi');
 Route::get('/terimakasih/{kode}','TransaksiController@terimakasih')->name('terimakasih');;
-
-// // Auth::routes();
-
-// Route::get('/home', 'HomeController@index')->name('home');
-// Route::get('/rekening', 'RekeningController@index');
-// Route::get('/rekening/create', 'RekeningController@create');
 
 //front
 Route::get('/{slug}', 'TransaksiController@create');

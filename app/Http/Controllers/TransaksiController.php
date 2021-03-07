@@ -55,9 +55,7 @@ class TransaksiController extends Controller
 
         $kode = DB::table('donasi')->select(['kode_transaksi'])->where('id',$id)->get()->first();
 
-    //return redirect()->route('terimakasih');
     return redirect()->route('terimakasih', ['kode' => $kode->kode_transaksi]);
-   // return redirect()->action('TransaksiController@terimakasih');
 
     }
 
