@@ -34,11 +34,11 @@
             <p class="text mb-5">No. Invoice : INV-{{$transaksi->id}}</p>
             
 
-            <p class="text mb-0 pb-0">Silahkan transfer ke rekening a/n</p>
+            <p class="text mb-0 pb-0">Silahkan transfer ke rekening <strong>{{$transaksi->bank}}</strong> a/n</p>
         <h5 class="h5 mt-0 pt-0">{{$transaksi->nama_rekening}}</h5>
 
             <div class="flex border border-gray rounded bg-gray-600 items-center p-3 mt-3 mb-3">
-              <p>{{$transaksi->nomor_rekening}}</p>
+              <p><strong>{{$transaksi->nomor_rekening}}</strong></p>
              </div>
 
 
