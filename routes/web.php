@@ -16,7 +16,8 @@ Route::get('/', function () {
 });
 
 Route::post('/proses_transaksi', 'TransaksiController@store')->name('proses_transaksi');
-Route::get('/terimakasih/{kode}','TransaksiController@terimakasih')->name('terimakasih');;
+Route::get('/terimakasih/{kode}','TransaksiController@terimakasih')->name('terimakasih');
+Route::get('/transaksi/{kode}','TransaksiController@getNotif')->name('notif');
 
 //front
 Route::get('/{slug}', 'TransaksiController@create');
