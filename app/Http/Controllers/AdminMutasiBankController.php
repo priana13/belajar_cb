@@ -21,7 +21,7 @@
 			$this->button_edit = true;
 			$this->button_delete = true;
 			$this->button_detail = true;
-			$this->button_show = true;
+			$this->button_show = false;
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = true;
@@ -143,9 +143,9 @@
 	        |
 	        */
 	        $this->index_statistic = array();
-
-
-
+			$this->index_statistic[] = ['label'=>'Total','count'=>DB::table('mutasi_bank')->count(),'color'=>'info','width'=>'col-md-4'];
+			$this->index_statistic[] = ['label'=>'Unconfirm','count'=>DB::table('mutasi_bank')->where('status','Unconfirm')->count(),'color'=>'warning','width'=>'col-md-4'];
+			$this->index_statistic[] = ['label'=>'Confirm','count'=>DB::table('mutasi_bank')->where('status','Confirm')->count(),'color'=>'success','width'=>'col-md-4'];
 	        /*
 	        | ---------------------------------------------------------------------- 
 	        | Add javascript at body 

@@ -21,7 +21,7 @@
 			$this->button_edit = true;
 			$this->button_delete = true;
 			$this->button_detail = true;
-			$this->button_show = true;
+			$this->button_show = false;
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = true;
@@ -110,9 +110,9 @@
 	        |
 	        */
 	        $this->index_statistic = array();
-
-
-
+			$this->index_statistic[] = ['label'=>'Total Data','count'=>DB::table('donasi')->count(),'color'=>'danger','width'=>'col-md-4'];
+			$this->index_statistic[] = ['label'=>'Pending','count'=>DB::table('donasi')->where('status','pending')->count(),'color'=>'warning','width'=>'col-md-4'];
+			$this->index_statistic[] = ['label'=>'Completed','count'=>DB::table('donasi')->where('status','completed')->count(),'color'=>'success','width'=>'col-md-4'];
 	        /*
 	        | ---------------------------------------------------------------------- 
 	        | Add javascript at body 
