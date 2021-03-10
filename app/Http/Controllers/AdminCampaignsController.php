@@ -31,7 +31,11 @@
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
 			$this->col[] = ["label"=>"Judul","name"=>"judul"];
-			$this->col[] = ["label"=>"Slug","name"=>"slug"];
+			$this->col[] = ["label"=>"Url","name"=>"slug","callback"=>function($row) {
+				$url=  url('/').'/'. $row->slug;
+
+				return "<input class='form-group' value='".$url."'>";
+			}];
 			$this->col[] = ["label"=>"Desc","name"=>"desc"];
 			$this->col[] = ["label"=>"Image","name"=>"image","image"=>true];
 			$this->col[] = ["label"=>"Jenis Campaigns Id","name"=>"jenis_campaigns_id","join"=>"jenis_campaigns,jenis_campaign"];
