@@ -46,6 +46,8 @@ class TransaksiController extends Controller
     public function create($slug)
     {
         $campaign = DB::table('campaigns')->where('slug',$slug)->get()->first();   
+        $setting = DB::table('setting')->where('key','pixel_id')->get()->first();       
+        $data['pixel_id'] = $setting->value;
 
         $data['campaign'] = $campaign;
         $data['rekening'] =DB::table('rekening')->get(); 
@@ -102,7 +104,9 @@ class TransaksiController extends Controller
                             ->join('rekening','rekening_id','rekening.id')
                             ->where('donasi.kode_transaksi',$kode)->get()->first();
 
-
+        $setting = DB::table('setting')->where('key','pixel_id')->get()->first();       
+        $data['pixel_id'] = $setting->value;
+        
         return view('front.terimakasih',$data);
     }
 
