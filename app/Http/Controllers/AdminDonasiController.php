@@ -44,7 +44,7 @@
 			$this->form = [];
 			$this->form[] = ['label'=>'Campaigns','name'=>'campaigns_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'campaigns,judul'];
 			$this->form[] = ['label'=>'Leads/Donatur','name'=>'leads_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'leads,nama'];
-			$this->form[] = ['label'=>'Mutasi Bank','name'=>'mutasi_bank_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'mutasi_bank,id'];
+			$this->form[] = ['label'=>'Mutasi Bank','name'=>'mutasi_bank_id','type'=>'select2','validation'=>'min:1|max:255','width'=>'col-sm-10','datatable'=>'mutasi_bank,id'];
 			$this->form[] = ['label'=>'Nominal','name'=>'nominal','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Status','name'=>'status','type'=>'select','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'pending;Completed'];
 			# END FORM DO NOT REMOVE THIS LINE

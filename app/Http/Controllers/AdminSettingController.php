@@ -111,19 +111,6 @@
 	        */
 	        $this->index_button = array();
 
-
-
-	        /* 
-	        | ---------------------------------------------------------------------- 
-	        | Customize Table Row Color
-	        | ----------------------------------------------------------------------     
-	        | @condition = If condition. You may use field alias. E.g : [id] == 1
-	        | @color = Default is none. You can use bootstrap success,info,warning,danger,primary.        
-	        | 
-	        */
-	        $this->table_row_color = array();     	          
-
-	        
 	        /*
 	        | ---------------------------------------------------------------------- 
 	        | You may use this bellow array to add statistic at dashboard 
@@ -143,68 +130,13 @@
 	        | $this->script_js = "function() { ... }";
 	        |
 	        */
-	        $this->script_js = NULL;
+	        $this->script_js = "
+			
 
+			
+			
+			";
 
-            /*
-	        | ---------------------------------------------------------------------- 
-	        | Include HTML Code before index table 
-	        | ---------------------------------------------------------------------- 
-	        | html code to display it before index table
-	        | $this->pre_index_html = "<p>test</p>";
-	        |
-	        */
-	        $this->pre_index_html = null;
-	        
-	        
-	        
-	        /*
-	        | ---------------------------------------------------------------------- 
-	        | Include HTML Code after index table 
-	        | ---------------------------------------------------------------------- 
-	        | html code to display it after index table
-	        | $this->post_index_html = "<p>test</p>";
-	        |
-	        */
-	        $this->post_index_html = null;
-	        
-	        
-	        
-	        /*
-	        | ---------------------------------------------------------------------- 
-	        | Include Javascript File 
-	        | ---------------------------------------------------------------------- 
-	        | URL of your javascript each array 
-	        | $this->load_js[] = asset("myfile.js");
-	        |
-	        */
-	        $this->load_js = array();
-	        
-	        
-	        
-	        /*
-	        | ---------------------------------------------------------------------- 
-	        | Add css style at body 
-	        | ---------------------------------------------------------------------- 
-	        | css code in the variable 
-	        | $this->style_css = ".style{....}";
-	        |
-	        */
-	        $this->style_css = NULL;
-	        
-	        
-	        
-	        /*
-	        | ---------------------------------------------------------------------- 
-	        | Include css File 
-	        | ---------------------------------------------------------------------- 
-	        | URL of your css each array 
-	        | $this->load_css[] = asset("myfile.css");
-	        |
-	        */
-	        $this->load_css = array();
-	        
-	        
 	    }
 
 
@@ -329,11 +261,11 @@
 		public function postData(Request $request)
 		{
 			DB::table('setting')->where('key', 'api_moota')->update(['value' => $request->input('moota')]);
-			DB::table('setting')->where('key', 'api_woo')->update(['value' => $request->input('woo-wa')]);
+			DB::table('setting')->where('key', 'api_woo')->update(['value' => $request->input('woo_wa')]);
 			DB::table('setting')->where('key', 'pixel_id')->update(['value' => $request->input('pixel_id')]);
 
 
-			return back()->withInput();
+			return back()->with('message','success');
 		}
 
 
