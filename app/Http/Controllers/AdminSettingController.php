@@ -1,7 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 	use Session;
-	use Request;
+	use Illuminate\Http\Request;
 	use DB;
 	use CRUDBooster;
 
@@ -316,6 +316,25 @@
 	        //Your code here
 
 	    }
+
+
+		public function getIndex()
+		{
+			$data['api_moota'] = DB::table('setting')->where('key','api_moota')->get()->first();
+			$data['api_woo'] = DB::table('setting')->where('key','api_woo')->get()->first();
+			$data['pixel_id'] = DB::table('setting')->where('key','pixel_id')->get()->first();
+			return view('setting',$data);
+		}
+
+		public function postData(Request $request)
+		{
+			DB::table('setting')->where('key', 'api_moota')->update(['value' => $request->input('moota')]);
+			DB::table('setting')->where('key', 'api_woo')->update(['value' => $request->input('woo-wa')]);
+			DB::table('setting')->where('key', 'pixel_id')->update(['value' => $request->input('pixel_id')]);
+
+
+			return back()->withInput();
+		}
 
 
 
