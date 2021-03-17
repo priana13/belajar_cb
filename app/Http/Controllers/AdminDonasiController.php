@@ -37,7 +37,7 @@
 			$this->col[] = ["label"=>"Rekening","name"=>"rekening_id","join"=>"rekening,bank"];
 			$this->col[] = ["label"=>"Nominal","name"=>"nominal"];
 			$this->col[] = ["label"=>"Status","name"=>"status"];
-			$this->col[] = ["label"=>"ID Mutasi","name"=>"mutasi_bank_id","join"=>"mutasi_bank,id"];
+			// $this->col[] = ["label"=>"ID Mutasi","name"=>"mutasi_bank_id","join"=>"mutasi_bank,id"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
@@ -247,7 +247,24 @@
 	    }
 
 
+		public function getIndex()
+		{
+			//First, Add an auth
+			if(!CRUDBooster::isView()) CRUDBooster::redirect(CRUDBooster::adminPath(),trans('crudbooster.denied_access'));
+   
+			//Create your own query 
+			$data = [];
+			$data['page_title'] = 'Halaman Donasi';
 
+			$data['donasi'] = DB::table('donasi')
+								->select(['donasi.*','rekening.bank','leads.nama','campaigns.judul'])
+								->join('rekening','rekening_id','rekening.id')
+								->join('leads','leads_id','leads.id')
+								->join('campaigns','campaigns_id','campaigns.id')
+								->paginate(10);		
+			
+			return view('admin.donasi',$data);
+		}
 
 
 
