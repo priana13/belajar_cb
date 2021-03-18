@@ -7,21 +7,42 @@
         <div class="col-md-10">
             <div class="box">
 
-
-
-                <div id="example1_filter" class="">
-                        <label>Search:
-                            <input type="search" class="form-control input-sm" placeholder="" aria-controls="example1">
-                        </label>
-                    </div>
-
-
-
-
+            <br>
 
 
                 <div class="box-header">
-                <h3 class="box-title">Data Table Donasi</h3>
+                    <!-- form filtering -->
+                    <form class="form-inline">
+
+
+
+                            <div class="form-group">
+                                <label class="sr-only" for="status">Status</label>
+                                <select type="text" class="form-control" id="status">  
+                                        <option value="1">Sukses</option>
+                                        <option value="pending">Pending</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="sr-only" for="bank">Bank</label>
+                                <select type="text" class="form-control" id="bank">  
+                                        <option value="1">Mandiri</option>
+                                        <option value="bsi">BSI</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="jenis_donasi">Jenis Donasi</label>
+                                <select type="text" class="form-control" id="jenis_donasi">  
+                                        <option value="1">Infak Sedekah</option>
+                                        <option value="bsi">Wakaf</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-default">Cari Data</button>
+                        </form>
+
+               
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
