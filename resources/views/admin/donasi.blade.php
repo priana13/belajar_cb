@@ -8,9 +8,61 @@
             <div class="box">
 
             <br>
+
+
                 <div class="box-header">
+
+                <!-- widget 1 -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="small-box bg-info">
+                            <div class="inner">
+                                <h3>3</h3>
+                                <p>Sukses</p>
+                            </div>
+                            <div class="icon">
+                                <i class=""></i>
+                            </div>
+                        </div>
+                    </div>
+
+
+                <!-- widget 2 -->
+
+                    <div class="col-md-4">
+                        <div class="small-box bg-success">
+                            <div class="inner">
+                                <h3>3</h3>
+                                <p>Pending</p>
+                            </div>
+                            <div class="icon">
+                                <i class=""></i>
+                            </div>
+                        </div>
+                    </div>
+
+
+                <!-- widget 3 -->
+
+                    <div class="col-md-4">
+                        <div class="small-box bg-danger">
+                            <div class="inner">
+                                <h3>3</h3>
+                                <p>Cenceled</p>
+                            </div>
+                            <div class="icon">
+                                <i class=""></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+
+
                     <!-- form filtering -->
-                    <form class="form-inline"  method="GET" id="formulir">
+                    <form class="form-inline" action="{{route('data_donasi')}}"  method="POST" id="formulir">
 
                             @csrf
                             <div class="form-group">

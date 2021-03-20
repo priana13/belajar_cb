@@ -249,7 +249,37 @@
 
 
 
-		public function getIndex(Request $request)
+		public function getIndex()
+		{
+			//First, Add an auth
+			if(!CRUDBooster::isView()) CRUDBooster::redirect(CRUDBooster::adminPath(),trans('crudbooster.denied_access'));
+
+			//dd($status);
+			//Create your own query 
+			$data = [];
+			$data['page_title'] = 'Halaman Donasi';
+
+			$donasi = DB::table('donasi')
+								->select(['donasi.*','rekening.bank','leads.nama','campaigns.judul'])
+								->join('rekening','rekening_id','rekening.id')
+								->join('leads','leads_id','leads.id')
+								->join('campaigns','campaigns_id','campaigns.id');	
+								
+
+			$donasi = $donasi->paginate(10);
+
+			$data['donasi'] = $donasi;
+
+
+			$data['rekening'] =DB::table('rekening')->get();
+			$data['campaigns'] =DB::table('campaigns')->get();
+			
+			return view('admin.donasi',$data);
+		}
+
+
+
+		public function postIndex(Request $request)
 		{
 			//First, Add an auth
 			if(!CRUDBooster::isView()) CRUDBooster::redirect(CRUDBooster::adminPath(),trans('crudbooster.denied_access'));
