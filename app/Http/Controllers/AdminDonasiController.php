@@ -265,10 +265,16 @@
 								->join('leads','leads_id','leads.id')
 								->join('campaigns','campaigns_id','campaigns.id');	
 								
+			$data['Completed'] = DB::table('donasi')->where('donasi.status','Completed')->count();
+			$data['pending'] = DB::table('donasi')->where('donasi.status','pending')->count();
+			$data['canceled'] = DB::table('donasi')->where('donasi.status','canceled')->count();
 
 			$donasi = $donasi->paginate(10);
 
 			$data['donasi'] = $donasi;
+
+			
+
 
 
 			$data['rekening'] =DB::table('rekening')->get();
@@ -319,6 +325,11 @@
 			if($rekening!=null){
 				$donasi = $donasi->where('jenis_campaigns_id',$jenis_donasi);
 			}
+
+
+			$data['Completed'] = DB::table('donasi')->where('donasi.status','Completed')->count();
+			$data['pending'] = DB::table('donasi')->where('donasi.status','pending')->count();
+			$data['canceled'] = DB::table('donasi')->where('donasi.status','canceled')->count();
 
 			$donasi = $donasi->paginate(10);
 

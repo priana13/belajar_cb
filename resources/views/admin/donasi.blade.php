@@ -17,8 +17,8 @@
                     <div class="col-md-4">
                         <div class="small-box bg-info">
                             <div class="inner">
-                                <h3>3</h3>
-                                <p>Sukses</p>
+                                <h3>{{$Completed}}</h3>
+                                <p>Completed</p>
                             </div>
                             <div class="icon">
                                 <i class=""></i>
@@ -32,7 +32,7 @@
                     <div class="col-md-4">
                         <div class="small-box bg-success">
                             <div class="inner">
-                                <h3>3</h3>
+                                <h3>{{$pending}}</h3>
                                 <p>Pending</p>
                             </div>
                             <div class="icon">
@@ -47,7 +47,7 @@
                     <div class="col-md-4">
                         <div class="small-box bg-danger">
                             <div class="inner">
-                                <h3>3</h3>
+                                <h3>{{$canceled}}</h3>
                                 <p>Cenceled</p>
                             </div>
                             <div class="icon">
@@ -85,7 +85,7 @@
                             <div class="form-group">
                                 <label class="" for="status">Status</label>
                                 <select type="text" class="form-control" id="status" name="status">  
-                                        <option value="sukses">Sukses</option>
+                                        <option value="Completed">Completed</option>
                                         <option value="pending">Pending</option>
                                         <option value="expired">Expired</option>
                                 </select>
