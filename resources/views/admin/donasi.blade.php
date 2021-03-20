@@ -8,43 +8,60 @@
             <div class="box">
 
             <br>
-
-
                 <div class="box-header">
                     <!-- form filtering -->
-                    <form class="form-inline">
+                    <form class="form-inline"  method="GET" id="formulir">
 
+                            @csrf
+                            <div class="form-group">
+                                <label class="" for="jenis_donasi">Form Donasi</label>
+                                <select type="text" class="form-control" id="jenis_donasi" name="jenis_donasi">  
+                                         @foreach($campaigns as $row)
+                                            <option value="{{$row->id}}">{{$row->judul}}</option>
+                                        @endforeach
+                                </select>
+                            </div>
 
 
                             <div class="form-group">
-                                <label class="sr-only" for="status">Status</label>
-                                <select type="text" class="form-control" id="status">  
-                                        <option value="1">Sukses</option>
+                                <label class="sr" for="tanggal_awal">Tanggal</label>
+                                <input type="date" class="form-control" id="tanggal_awal" name="tanggal_awal">  
+                                <input type="date" class="form-control" id="tanggal_akhir" name="tanggal_akhir"> 
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="" for="status">Status</label>
+                                <select type="text" class="form-control" id="status" name="status">  
+                                        <option value="sukses">Sukses</option>
                                         <option value="pending">Pending</option>
+                                        <option value="expired">Expired</option>
                                 </select>
                             </div>
 
                             <div class="form-group">
-                                <label class="sr-only" for="bank">Bank</label>
-                                <select type="text" class="form-control" id="bank">  
-                                        <option value="1">Mandiri</option>
-                                        <option value="bsi">BSI</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="sr-only" for="jenis_donasi">Jenis Donasi</label>
-                                <select type="text" class="form-control" id="jenis_donasi">  
-                                        <option value="1">Infak Sedekah</option>
-                                        <option value="bsi">Wakaf</option>
+                                <label class="" for="rekening">Rekening</label>
+                                <select type="text" class="form-control" id="rekening" name="rekening">  
+                                        @foreach($rekening as $row)
+                                        <option value="{{$row->id}}">{{$row->bank}}</option>
+                                        @endforeach
                                 </select>
                             </div>
 
-                            <button type="submit" class="btn btn-default">Cari Data</button>
+
+
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-lg">Cari</button>
+                            </div>                            
+
                         </form>
 
                
                 </div>
                 <!-- /.box-header -->
+
+                <hr>
                 <div class="box-body">
                 <table id="example1" class="table table-bordered table-striped">
                     <thead>

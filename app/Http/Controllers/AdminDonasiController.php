@@ -1,7 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 	use Session;
-	use Request;
+	use Illuminate\Http\Request;
 	use DB;
 	use CRUDBooster;
 
@@ -121,7 +121,7 @@
 	        | $this->script_js = "function() { ... }";
 	        |
 	        */
-	        $this->script_js = NULL;
+	        $this->script_js = "NULL";
 	        
 	        /*
 	        | ---------------------------------------------------------------------- 
@@ -247,24 +247,60 @@
 	    }
 
 
-		public function getIndex()
+
+
+		public function getIndex(Request $request)
 		{
 			//First, Add an auth
 			if(!CRUDBooster::isView()) CRUDBooster::redirect(CRUDBooster::adminPath(),trans('crudbooster.denied_access'));
    
+			$tanggal_awal = $request->input('tanggal_awal');
+			$tanggal_akhir = $request->input('tanggal_akhir');
+			$status = $request->input('status');
+			$rekening = $request->input('rekening');
+			$jenis_donasi = $request->input('jenis_donasi');
+
+			//dd($status);
 			//Create your own query 
 			$data = [];
 			$data['page_title'] = 'Halaman Donasi';
 
-			$data['donasi'] = DB::table('donasi')
+			$donasi = DB::table('donasi')
 								->select(['donasi.*','rekening.bank','leads.nama','campaigns.judul'])
 								->join('rekening','rekening_id','rekening.id')
 								->join('leads','leads_id','leads.id')
 								->join('campaigns','campaigns_id','campaigns.id')
-								->paginate(10);		
+								;	
+								
+			if($status!=null){
+				$donasi = $donasi->where('donasi.status',$status);
+			}
+			if($tanggal_awal!=null){
+				$donasi = $donasi->where('donasi.tanggal','>=',$tanggal_awal);
+			}
+			if($tanggal_akhir!=null){
+				$donasi = $donasi->where('donasi.tanggal','<=',$tanggal_akhir);
+			}
+
+			if($rekening!=null){
+				$donasi = $donasi->where('donasi.rekening_id',$rekening);
+			}
+
+			if($rekening!=null){
+				$donasi = $donasi->where('jenis_campaigns_id',$jenis_donasi);
+			}
+
+			$donasi = $donasi->paginate(10);
+
+			$data['donasi'] = $donasi;
+
+
+			$data['rekening'] =DB::table('rekening')->get();
+			$data['campaigns'] =DB::table('campaigns')->get();
 			
 			return view('admin.donasi',$data);
 		}
+
 
 
 

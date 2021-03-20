@@ -21,4 +21,5 @@ Route::get('/transaksi/{kode}','TransaksiController@getNotif')->name('notif');
 
 //front
 Route::get('/{slug}', 'TransaksiController@create');
+Route::get('/donasi/data_donasi','AdminDonasiController@Data_donasi')->name('data_donasi');
 
