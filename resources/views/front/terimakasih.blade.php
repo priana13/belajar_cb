@@ -47,7 +47,7 @@
         <div class="bg-white text-center p-3">
         <hr class="border border-warning">
         
-            <h4 class="h4">Alhamdulillah, Tinggal satu langkah lagi Kak.. </h4>
+            <h4 class="h4">Alhamdulillah, Tinggal satu langkah lagi.. </h4>
             <p class="text mb-5">No. Invoice : INV-{{$transaksi->id}}</p>
             
 
@@ -65,7 +65,7 @@
 
             <div class="alert alert-warning" role="alert">
                 <span class="oi oi-info"></span>
-                <p class="text"><strong>PENTING!</strong> Mohon Transfer tepat <strong>3 Digit Terakhir</strong> yang tertera agar bisa di cek oleh system ya Kak.</p>
+                <p class="text"><strong>PENTING!</strong> Mohon Transfer tepat <strong>3 Digit Terakhir</strong> yang tertera agar bisa di cek oleh system</p>
             </div>
 
 
