@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -37,8 +38,8 @@
             <!-- Just an image -->
             <nav class="navbar navbar-light bg-light">
             <a class="navbar-brand" href="#">
-                <!-- Logo <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" alt=""> -->
-            <h2>Logo</h2>
+                <img src="{{url('/')}}/{{$cms_settings->content}}" width="60" height="60" alt="">
+            <!-- <h2>Logo</h2> -->
             </a>
             </nav>
         </div>

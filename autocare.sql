@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 20, 2021 at 12:32 AM
+-- Generation Time: Mar 25, 2021 at 04:29 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -43,7 +43,7 @@ CREATE TABLE `campaigns` (
 --
 
 INSERT INTO `campaigns` (`id`, `judul`, `slug`, `desc`, `image`, `created_at`, `updated_at`, `jenis_campaigns_id`) VALUES
-(1, 'Sedekah Santri', 'sedekah-santri', 'Donasi untuk santri penghafal Quran', 'uploads/1/2021-02/screenshot_from_2021_02_18_06_02_05.png', '2021-02-18 16:03:24', NULL, 1);
+(1, 'Sedekah Santri Penghafal Quran', 'sedekah-santri', 'Donasi untuk santri penghafal Quran', 'uploads/1/2021-02/screenshot_from_2021_02_18_06_02_05.png', '2021-02-18 16:03:24', '2021-03-03 08:01:54', 1);
 
 -- --------------------------------------------------------
 
@@ -204,7 +204,50 @@ INSERT INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `d
 (31, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/login', 'admin@autocare.id login with IP Address 127.0.0.1', '', 2, '2021-02-19 16:17:16', NULL),
 (32, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/logout', 'admin@autocare.id keluar', '', 2, '2021-02-19 16:31:13', NULL),
 (33, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/login', 'super@autocare.id login dengan IP Address 127.0.0.1', '', 1, '2021-02-19 16:31:18', NULL),
-(34, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/menu_management/edit-save/1', 'Memperbaharui data Rekening pada Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td>rekening</td><td>Rekening</td></tr><tr><td>parent_id</td><td>8</td><td></td></tr><tr><td>sorting</td><td>2</td><td></td></tr></tbody></table>', 1, '2021-02-19 16:31:36', NULL);
+(34, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/menu_management/edit-save/1', 'Memperbaharui data Rekening pada Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td>rekening</td><td>Rekening</td></tr><tr><td>parent_id</td><td>8</td><td></td></tr><tr><td>sorting</td><td>2</td><td></td></tr></tbody></table>', 1, '2021-02-19 16:31:36', NULL),
+(35, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/logout', 'super@autocare.id keluar', '', 1, '2021-02-19 16:35:29', NULL),
+(36, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/login', 'admin@autocare.id login dengan IP Address 127.0.0.1', '', 2, '2021-02-19 16:35:36', NULL),
+(37, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/logout', 'admin@autocare.id keluar', '', 2, '2021-02-19 16:36:14', NULL),
+(38, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/login', 'admin@autocare.id login dengan IP Address 127.0.0.1', '', 2, '2021-02-22 07:52:41', NULL),
+(39, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/login', 'admin@autocare.id login dengan IP Address 127.0.0.1', '', 2, '2021-02-25 23:06:13', NULL),
+(40, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/login', 'admin@autocare.id login dengan IP Address 127.0.0.1', '', 2, '2021-03-03 07:38:22', NULL),
+(41, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/campaigns/edit-save/1', 'Memperbaharui data Sedekah Santri Penghafal Quran pada Campaigns', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>judul</td><td>Sedekah Santri</td><td>Sedekah Santri Penghafal Quran</td></tr></tbody></table>', 2, '2021-03-03 08:01:54', NULL),
+(42, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/rekening/add-save', 'Tambah data baru Yaysan Peduli pada rekening', '', 2, '2021-03-03 08:09:08', NULL),
+(43, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/leads/add-save', 'Tambah data baru Priana pada Leads', '', 2, '2021-03-03 08:44:57', NULL),
+(44, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/donasi/delete/1', 'Menghapus data 1 pada Donasi', '', 2, '2021-03-03 08:49:46', NULL),
+(45, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/leads/delete/3', 'Menghapus data Ahmad pada Leads', '', 2, '2021-03-03 08:53:44', NULL),
+(46, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/logout', 'admin@autocare.id keluar', '', 2, '2021-03-03 08:58:08', NULL),
+(47, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/login', 'super@autocare.id login dengan IP Address 127.0.0.1', '', 1, '2021-03-03 09:12:49', NULL),
+(48, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/logout', 'super@autocare.id keluar', '', 1, '2021-03-03 09:13:21', NULL),
+(49, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/login', 'super@autocare.id login dengan IP Address 127.0.0.1', '', 1, '2021-03-03 09:13:55', NULL),
+(50, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/logout', 'super@autocare.id keluar', '', 1, '2021-03-03 09:14:27', NULL),
+(51, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/login', 'super@autocare.id login dengan IP Address 127.0.0.1', '', 1, '2021-03-03 09:14:40', NULL),
+(52, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/login', 'admin@autocare.id login dengan IP Address 127.0.0.1', '', 2, '2021-03-03 09:21:17', NULL),
+(53, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/logout', 'admin@autocare.id keluar', '', 2, '2021-03-03 09:21:34', NULL),
+(54, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/login', 'admin@autocare.id login dengan IP Address 127.0.0.1', '', 2, '2021-03-04 08:00:04', NULL),
+(55, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/login', 'admin@autocare.id login dengan IP Address 127.0.0.1', '', 2, '2021-03-06 19:47:31', NULL),
+(56, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/rekening/edit-save/1', 'Memperbaharui data Yayasan Peduli pada rekening', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>nomor_rekening</td><td>0855599955</td><td>08555999556</td></tr></tbody></table>', 2, '2021-03-06 19:48:16', NULL),
+(57, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/rekening/edit-save/1', 'Memperbaharui data Yayasan Tuhfah Peduli pada rekening', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>nama_rekening</td><td>Yayasan Peduli</td><td>Yayasan Tuhfah Peduli</td></tr></tbody></table>', 2, '2021-03-06 19:48:36', NULL),
+(58, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:75.0) Gecko/20100101 Firefox/75.0', 'http://127.0.0.1:8000/admin/login', 'admin@autocare.id login dengan IP Address 127.0.0.1', '', 2, '2021-03-09 07:35:04', NULL),
+(59, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36', 'http://localhost:8000/admin/login', 'admin@autocare.id login dengan IP Address 127.0.0.1', '', 2, '2021-03-09 08:17:06', NULL),
+(60, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36', 'http://localhost:8000/admin/login', 'admin@autocare.id login dengan IP Address 127.0.0.1', '', 2, '2021-03-10 08:46:20', NULL),
+(61, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'admin@autocare.id login dengan IP Address 127.0.0.1', '', 2, '2021-03-12 15:53:38', NULL),
+(62, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'admin@autocare.id login dengan IP Address 127.0.0.1', '', 2, '2021-03-16 06:13:01', NULL),
+(63, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36', 'http://127.0.0.1:8000/admin/donasi/edit-save/15', 'Memperbaharui data  pada Donasi', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>kode_transaksi</td><td>6047918809fac</td><td></td></tr><tr><td>mutasi_bank_id</td><td></td><td>1</td></tr><tr><td>status</td><td>pending</td><td>Completed</td></tr><tr><td>kode_unik</td><td>910</td><td></td></tr></tbody></table>', 2, '2021-03-16 06:32:06', NULL),
+(64, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'super@autocare.id login dengan IP Address 127.0.0.1', '', 1, '2021-03-17 15:28:20', NULL),
+(65, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/delete/5', 'Menghapus data Mutasi Bank pada Menu Management', '', 1, '2021-03-17 15:28:32', NULL),
+(66, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36', 'http://127.0.0.1:8000/admin/logout', 'super@autocare.id keluar', '', 1, '2021-03-17 16:14:43', NULL),
+(67, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'admin@autocare.id login dengan IP Address 127.0.0.1', '', 2, '2021-03-17 16:14:47', NULL),
+(68, '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Mobile Safari/537.36', 'http://127.0.0.1:8000/admin/leads/delete/2', 'Menghapus data Priana pada Leads', '', 2, '2021-03-17 16:31:57', NULL),
+(69, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36', 'http://127.0.0.1:8000/admin/donasi/delete/2', 'Menghapus data 2 pada Donasi', '', 2, '2021-03-17 16:32:38', NULL),
+(70, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36', 'http://127.0.0.1:8000/admin/donasi/delete/3', 'Menghapus data 3 pada Donasi', '', 2, '2021-03-17 16:32:43', NULL),
+(71, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36', 'http://127.0.0.1:8000/admin/leads/delete/2', 'Menghapus data Priana pada Leads', '', 2, '2021-03-17 16:37:46', NULL),
+(72, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36', 'http://127.0.0.1:8000/admin/logout', 'admin@autocare.id keluar', '', 2, '2021-03-17 16:37:56', NULL),
+(73, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'admin@autocare.id login dengan IP Address 127.0.0.1', '', 2, '2021-03-18 15:32:46', NULL),
+(74, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'admin@autocare.id login dengan IP Address 127.0.0.1', '', 2, '2021-03-20 02:08:17', NULL),
+(75, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36', 'http://127.0.0.1:8000/admin/donasi/delete/11', 'Menghapus data 11 pada Donasi', '', 2, '2021-03-20 05:09:59', NULL),
+(76, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'admin@autocare.id login dengan IP Address 127.0.0.1', '', 2, '2021-03-20 15:26:19', NULL),
+(77, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36', 'http://127.0.0.1:8000/admin/donasi/edit-save/5', 'Memperbaharui data  pada Donasi', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>kode_transaksi</td><td>0</td><td></td></tr><tr><td>mutasi_bank_id</td><td></td><td></td></tr><tr><td>status</td><td>pending</td><td>Completed</td></tr><tr><td>kode_unik</td><td>0</td><td></td></tr></tbody></table>', 2, '2021-03-20 15:34:46', NULL);
 
 -- --------------------------------------------------------
 
@@ -237,7 +280,6 @@ INSERT INTO `cms_menus` (`id`, `name`, `type`, `path`, `color`, `icon`, `parent_
 (2, 'Jenis Campaigns', 'Route', 'AdminJenisCampaignsControllerGetIndex', 'normal', 'fa fa-meanpath', 3, 1, 0, 1, 2, '2021-02-18 15:53:21', '2021-02-19 16:03:52'),
 (3, 'Campaigns', 'Route', 'AdminCampaignsControllerGetIndex', 'normal', 'fa fa-th-list', 0, 1, 0, 1, 1, '2021-02-18 15:54:03', '2021-02-19 16:03:39'),
 (4, 'Leads', 'Route', 'AdminLeadsControllerGetIndex', 'normal', 'fa fa-users', 0, 1, 0, 1, 3, '2021-02-18 15:54:40', '2021-02-19 16:04:07'),
-(5, 'Mutasi Bank', 'Route', 'AdminMutasiBankControllerGetIndex', 'normal', 'fa fa-bank', 0, 1, 0, 1, 4, '2021-02-18 15:55:18', '2021-02-19 16:04:14'),
 (6, 'Donasi', 'Route', 'AdminDonasiControllerGetIndex', 'normal', 'fa fa-heart', 0, 1, 0, 1, 2, '2021-02-18 15:55:51', '2021-02-19 16:04:00'),
 (7, 'Konfigurasi Global', 'Route', 'AdminSettingControllerGetIndex', 'normal', 'fa fa-gear', 8, 1, 0, 1, 1, '2021-02-18 15:57:11', '2021-02-19 16:04:29'),
 (8, 'Setting', 'Module', 'setting', 'normal', 'fa fa-gear', 0, 1, 0, 1, 5, '2021-02-18 15:58:17', '2021-02-19 16:04:22'),
@@ -439,7 +481,7 @@ CREATE TABLE `cms_settings` (
 INSERT INTO `cms_settings` (`id`, `name`, `content`, `content_input_type`, `dataenum`, `helper`, `created_at`, `updated_at`, `group_setting`, `label`) VALUES
 (1, 'login_background_color', NULL, 'text', NULL, 'Input hexacode', '2021-02-18 08:30:15', NULL, 'Login Register Style', 'Login Background Color'),
 (2, 'login_font_color', NULL, 'text', NULL, 'Input hexacode', '2021-02-18 08:30:15', NULL, 'Login Register Style', 'Login Font Color'),
-(3, 'login_background_image', NULL, 'upload_image', NULL, NULL, '2021-02-18 08:30:15', NULL, 'Login Register Style', 'Login Background Image'),
+(3, 'login_background_image', 'uploads/2021-03/9b3825e504eeaa6cb255d284b172ed57.jpg', 'upload_image', NULL, NULL, '2021-02-18 08:30:15', NULL, 'Login Register Style', 'Login Background Image'),
 (4, 'email_sender', 'support@crudbooster.com', 'text', NULL, NULL, '2021-02-18 08:30:15', NULL, 'Email Setting', 'Email Sender'),
 (5, 'smtp_driver', 'mail', 'select', 'smtp,mail,sendmail', NULL, '2021-02-18 08:30:15', NULL, 'Email Setting', 'Mail Driver'),
 (6, 'smtp_host', '', 'text', NULL, NULL, '2021-02-18 08:30:15', NULL, 'Email Setting', 'SMTP Host'),
@@ -448,7 +490,7 @@ INSERT INTO `cms_settings` (`id`, `name`, `content`, `content_input_type`, `data
 (9, 'smtp_password', '', 'text', NULL, NULL, '2021-02-18 08:30:15', NULL, 'Email Setting', 'SMTP Password'),
 (10, 'appname', 'AutoCare (Beta)', 'text', NULL, NULL, '2021-02-18 08:30:15', NULL, 'Application Setting', 'Application Name'),
 (11, 'default_paper_size', 'Legal', 'text', NULL, 'Paper size, ex : A4, Legal, etc', '2021-02-18 08:30:15', NULL, 'Application Setting', 'Default Paper Print Size'),
-(12, 'logo', NULL, 'upload_image', NULL, NULL, '2021-02-18 08:30:15', NULL, 'Application Setting', 'Logo'),
+(12, 'logo', 'uploads/2021-03/1b9bc896134b27278f372132a6d367a2.png', 'upload_image', NULL, NULL, '2021-02-18 08:30:15', NULL, 'Application Setting', 'Logo'),
 (13, 'favicon', NULL, 'upload_image', NULL, NULL, '2021-02-18 08:30:15', NULL, 'Application Setting', 'Favicon'),
 (14, 'api_debug_mode', 'true', 'select', 'true,false', NULL, '2021-02-18 08:30:15', NULL, 'Application Setting', 'API Debug Mode'),
 (15, 'google_api_key', NULL, 'text', NULL, NULL, '2021-02-18 08:30:15', NULL, 'Application Setting', 'Google API Key'),
@@ -521,14 +563,35 @@ INSERT INTO `cms_users` (`id`, `name`, `photo`, `email`, `password`, `id_cms_pri
 
 CREATE TABLE `donasi` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `nominal` int(11) NOT NULL,
-  `status` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
+  `kode_transaksi` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp(),
   `campaigns_id` bigint(20) UNSIGNED NOT NULL,
   `leads_id` bigint(20) UNSIGNED NOT NULL,
-  `mutasi_bank_id` bigint(20) UNSIGNED NOT NULL
+  `rekening_id` int(11) NOT NULL,
+  `mutasi_bank_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `nominal` int(11) NOT NULL,
+  `status` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `kode_unik` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `donasi`
+--
+
+INSERT INTO `donasi` (`id`, `kode_transaksi`, `created_at`, `updated_at`, `campaigns_id`, `leads_id`, `rekening_id`, `mutasi_bank_id`, `nominal`, `status`, `kode_unik`) VALUES
+(4, '0', '2021-03-03 15:54:13', '2021-03-03 15:54:13', 1, 4, 2, NULL, 50000, 'pending', 0),
+(5, '0', '2021-03-04 15:06:52', '2021-03-20 15:34:46', 1, 2, 1, NULL, 50000, 'Completed', 0),
+(6, '0', '2021-03-04 15:10:06', '2021-03-04 15:10:06', 1, 2, 1, NULL, 50000, 'pending', 0),
+(7, '0', '2021-03-04 15:11:10', '2021-03-04 15:11:10', 1, 2, 1, NULL, 50000, 'pending', 0),
+(8, '0', '2021-03-04 15:11:56', '2021-03-04 15:11:56', 1, 2, 1, NULL, 50000, 'pending', 0),
+(9, '0', '2021-03-07 02:46:36', '2021-03-07 02:46:36', 1, 5, 1, NULL, 50856, 'pending', 856),
+(10, '60443fdb9c48c', '2021-03-07 02:52:11', '2021-03-07 02:52:11', 1, 5, 1, NULL, 40454, 'pending', 454),
+(12, '604440e85b204', '2021-03-07 02:56:40', '2021-03-07 02:56:40', 1, 2, 1, NULL, 25843, 'pending', 843),
+(13, '6044412accd13', '2021-03-07 02:57:46', '2021-03-07 02:57:46', 1, 2, 1, NULL, 25635, 'pending', 635),
+(14, '60444162d38f3', '2021-03-07 02:58:42', '2021-03-07 02:58:42', 1, 2, 1, NULL, 25793, 'pending', 793),
+(15, '6047918809fac', '2021-03-09 15:17:28', '2021-03-16 06:32:06', 1, 5, 1, 1, 50910, 'Completed', 910),
+(16, '6050bbde5b633', '2021-03-16 14:08:30', '2021-03-16 14:08:30', 1, 5, 1, NULL, 50621, 'pending', 621);
 
 -- --------------------------------------------------------
 
@@ -577,8 +640,8 @@ CREATE TABLE `leads` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `nama` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `hp` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `kota` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `kota` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -589,7 +652,9 @@ CREATE TABLE `leads` (
 --
 
 INSERT INTO `leads` (`id`, `nama`, `hp`, `email`, `kota`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Priana', '089504932111', 'herian.sap@gmail.com', 'Bogor', 'Aktif', '2021-02-19 15:58:42', NULL);
+(2, 'Priana', '08950493211', 'tes@gmail.com', 'Bogor', 'Donatur', '2021-03-03 08:44:57', NULL),
+(4, 'Ahmad', '0895049321166', NULL, NULL, 'prospek', NULL, NULL),
+(5, 'Priana', '089504932111', NULL, NULL, 'prospek', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -703,7 +768,8 @@ CREATE TABLE `rekening` (
 --
 
 INSERT INTO `rekening` (`id`, `nama_rekening`, `nomor_rekening`, `bank`, `scrap_id`, `created_at`, `updated_at`) VALUES
-(1, 'Yayasan Peduli', '0855599955', 'Mandiri', '55dagag44', '2021-02-18 15:51:07', NULL);
+(1, 'Yayasan Tuhfah Peduli', '08555999556', 'Mandiri', '55dagag44', '2021-02-18 15:51:07', '2021-03-06 19:48:36'),
+(2, 'Yaysan Peduli', '05885555444', 'BCA', NULL, '2021-03-03 08:09:08', NULL);
 
 -- --------------------------------------------------------
 
@@ -713,11 +779,20 @@ INSERT INTO `rekening` (`id`, `nama_rekening`, `nomor_rekening`, `bank`, `scrap_
 
 CREATE TABLE `setting` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `api_moota` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `api_woo_wa` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `key` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `value` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `setting`
+--
+
+INSERT INTO `setting` (`id`, `key`, `value`, `created_at`, `updated_at`) VALUES
+(1, 'api_woo', '555d4d4d4d55559kkk555', NULL, NULL),
+(2, 'api_moota', 'jaglfksjfg;sf99944kkkk888', NULL, NULL),
+(3, 'pixel_id', 'afalkjdghalfkgjagdrrrriiii', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -857,7 +932,8 @@ ALTER TABLE `donasi`
   ADD PRIMARY KEY (`id`),
   ADD KEY `donasi_campaigns_id_foreign` (`campaigns_id`),
   ADD KEY `donasi_leads_id_foreign` (`leads_id`),
-  ADD KEY `donasi_mutasi_bank_id_foreign` (`mutasi_bank_id`);
+  ADD KEY `donasi_mutasi_bank_id_foreign` (`mutasi_bank_id`),
+  ADD KEY `rekening_id` (`rekening_id`);
 
 --
 -- Indexes for table `failed_jobs`
@@ -959,7 +1035,7 @@ ALTER TABLE `cms_email_templates`
 -- AUTO_INCREMENT for table `cms_logs`
 --
 ALTER TABLE `cms_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
 -- AUTO_INCREMENT for table `cms_menus`
@@ -1025,7 +1101,7 @@ ALTER TABLE `cms_users`
 -- AUTO_INCREMENT for table `donasi`
 --
 ALTER TABLE `donasi`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -1043,7 +1119,7 @@ ALTER TABLE `jenis_campaigns`
 -- AUTO_INCREMENT for table `leads`
 --
 ALTER TABLE `leads`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -1061,13 +1137,13 @@ ALTER TABLE `mutasi_bank`
 -- AUTO_INCREMENT for table `rekening`
 --
 ALTER TABLE `rekening`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `setting`
 --
 ALTER TABLE `setting`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`

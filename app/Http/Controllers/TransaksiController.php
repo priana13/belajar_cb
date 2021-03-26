@@ -51,6 +51,7 @@ class TransaksiController extends Controller
 
         $data['campaign'] = $campaign;
         $data['rekening'] =DB::table('rekening')->get(); 
+        $data['cms_settings'] =DB::table('cms_settings')->where('name','logo')->get()->first();
         return view('front.form_donasi',$data);
     }
 
