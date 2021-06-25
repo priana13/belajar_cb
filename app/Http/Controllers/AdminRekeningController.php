@@ -11,26 +11,26 @@
 
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
 			$this->title_field = "nama_rekening";
-			$this->limit = "20";
+			$this->limit = "10";
 			$this->orderby = "id,desc";
-			$this->global_privilege = false;
+			$this->global_privilege = true;
 			$this->button_table_action = true;
 			$this->button_bulk_action = true;
-			$this->button_action_style = "button_icon";
+			$this->button_action_style = "button_icon_text";
 			$this->button_add = true;
 			$this->button_edit = true;
-			$this->button_delete = true;
+			$this->button_delete = false;
 			$this->button_detail = true;
-			$this->button_show = true;
+			$this->button_show = false;
 			$this->button_filter = true;
 			$this->button_import = false;
-			$this->button_export = false;
+			$this->button_export = true;
 			$this->table = "rekening";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Nama Rekening","name"=>"nama_rekening"];
+			$this->col[] = ["label"=>"Nama","name"=>"nama_rekening"];
 			$this->col[] = ["label"=>"Nomor Rekening","name"=>"nomor_rekening"];
 			$this->col[] = ["label"=>"Bank","name"=>"bank"];
 			$this->col[] = ["label"=>"Scrap Id","name"=>"scrap_id"];
@@ -40,16 +40,16 @@
 			$this->form = [];
 			$this->form[] = ['label'=>'Nama Rekening','name'=>'nama_rekening','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Nomor Rekening','name'=>'nomor_rekening','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Bank','name'=>'bank','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Bank Mandiri;Bank BCA;Bank BNI Syariah;Bank Syariah Mandiri;Bank BRI;Bank Muamalat; Bank Syariah Indonesia'];
-			$this->form[] = ['label'=>'Scrap Id','name'=>'scrap_id','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Bank','name'=>'bank','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Scrap Id','name'=>'scrap_id','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10','datatable'=>'scrap,id'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Nama Rekening','name'=>'nama_rekening','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Nomor Rekening','name'=>'nomor_rekening','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Bank','name'=>'bank','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Scrap Id','name'=>'scrap_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'scrap,id'];
+			//$this->form[] = ["label"=>"Nama Rekening","name"=>"nama_rekening","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Nomor Rekening","name"=>"nomor_rekening","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Bank","name"=>"bank","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Scrap Id","name"=>"scrap_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"scrap,id"];
 			# OLD END FORM
 
 			/* 
