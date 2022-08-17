@@ -138,6 +138,9 @@
 	        |
 	        */
 	        $this->index_statistic = array();
+			$this->index_statistic[] = ['label'=>'Total Karyawan','count'=>DB::table('karyawan')->count(),'icon'=>'fa fa-users','color'=>'primary'];
+			$this->index_statistic[] = ['label'=>'Laki-laki','count'=>DB::table('karyawan')->where('jk','Laki-laki')->count(),'icon'=>'fa fa-users','color'=>'danger'];
+			$this->index_statistic[] = ['label'=>'Perempuan','count'=>DB::table('karyawan')->where('jk','Perempuan')->count(),'icon'=>'fa fa-users','color'=>'info'];
 
 
 
@@ -338,10 +341,6 @@
 
 		// Mengganti halaman tambah
 
-		// Mengganti halaman Edit
-		public function getEdit(){
-	
-		}
 
 		// Mengganti halaman Detail
 		public function getDetail(){
